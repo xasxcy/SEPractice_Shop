@@ -20,11 +20,13 @@ public class UserController extends BaseController{
     //	2. 重定向可以访问到static文件夹里的页面
     //	3. 重定向不可以访问到templates文件夹里的页面
     //  4. 重定向可以找到static里面的文件，也可以找到controller里面的地址
+    //  5. 重定向传参：xxx?a=avalue&b=bvalue
     //- 转发： /地址
     //	1. 浏览器地址栏不会改变
     //	2. 转发可以访问到templates文件夹里的页面
     //	3. 转发不可以访问到static文件夹里的页面
     // 	4. 转发不可以找到Controller里面的地址
+    //  5. 转发传参：req.setAttribute("a", avalue);
 
     // 下面这句不要用new创建对象，而是使用注解@Autowired创建对象。
     @Resource
