@@ -1,6 +1,8 @@
 package com.boot.shop.controller;
 
+import com.boot.shop.bean.UserBean;
 import com.boot.shop.mapper.UserMapper;
+import org.apache.commons.collections.set.SynchronizedSet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,5 +23,11 @@ public class UserController {
     public void login(String username, String password){
         System.out.println(username);
         System.out.println(password);
+        UserBean user = userMapper.getUser(username, password);
+        if(user != null){
+            System.out.println("登录成功");
+        } else {
+            System.out.println("用户名或密码错误，登录失败");
+        }
     }
 }
