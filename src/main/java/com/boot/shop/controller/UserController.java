@@ -20,14 +20,18 @@ public class UserController {
     private UserMapper userMapper;
 
     @RequestMapping("/login")
-    public void login(String username, String password){
+    public String login(String username, String password){
         System.out.println(username);
         System.out.println(password);
         UserBean user = userMapper.getUser(username, password);
         if(user != null){
             System.out.println("登录成功");
+            // 跳转到主页
+            // ps：所有的地址，拼前不拼后，前面有一个/，后面就没有
+            return "/main";
         } else {
             System.out.println("用户名或密码错误，登录失败");
+            return "redirect:/index.html"; // 重定向到index.html页面
         }
     }
 }
