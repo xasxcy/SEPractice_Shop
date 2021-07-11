@@ -32,10 +32,10 @@ public class UserController extends BaseController{
 
     // 转发
     @RequestMapping("/login")
-    public String login(String username, String password){
+    public String login(String username, String password) {
         UserBean user = userMapper.getUser(username, password);
-        return user!=null ? ("redirect:/main?uid=" + user.getId()) : ("redirect:/index.html?msg=" + getUTF8Param("用户名或密码错误"));
-
+        return user != null ? ("redirect:/main?uid=" + user.getId()) : ("redirect:/index.html?msg=" + getUTF8Param("用户名或密码错误"));
+    }
         //        if(user != null){
 //            // 跳转到主页
 //            // ps：所有的地址，拼前不拼后，前面有一个/，后面就没有
@@ -45,14 +45,12 @@ public class UserController extends BaseController{
 //            System.out.println("用户名或密码错误，登录失败");
 //            return "redirect:/index.html?msg=" + getUTF8Param("用户名或密码错误"); // 重定向到index.html页面
 //        }
-    }
+//    }
 
     @RequestMapping("/main")
     public String main(int uid, HttpServletRequest req){
         // selectById是BaseMapper封装好的方法，根据主键查询
-        UserBean bean = userMapper.selectById(uid);
-        String username = bean.getUsername();
-        req.setAttribute("username", username);
+        req.setAttribute("bean", userMapper.selectById(uid));
         return "/main";
     }
 }
