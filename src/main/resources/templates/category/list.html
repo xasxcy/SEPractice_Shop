@@ -1,0 +1,7 @@
+<!-- 尖括号#list是freeMarker的for循环，
+    freeMarker的语法，前者类似JSP，就是在html页面中嵌入逻辑代码
+    1. 取出数组 2. 对这个数组进行for循环，每次循环产生的变量叫bean -->
+<#list retList as bean>
+    <div>${bean.id}：${bean.category}</div>
+</#list>
+

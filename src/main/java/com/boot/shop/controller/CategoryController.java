@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -16,11 +17,9 @@ public class CategoryController {
 
     // 查询操作
     @RequestMapping("/list")
-    public String list(){
-        System.out.println("查询操作");
-        List<CategoryBean> list = categoryMapper.selectList(null);
-        System.out.println(list.size());
-        return "";
+    public String list(HttpServletRequest req){
+        req.setAttribute("retList", categoryMapper.selectList(null));
+        return "/category/list";
     }
 
     // 添加操作
