@@ -30,15 +30,20 @@ public class CategoryController {
     // form表单的提交是post请求。
     // RequestMapping = GetMapping + PostMapping
 
-    // 添加操作
+    // 添加和修改放在一起
     @GetMapping("/add") // 打开页面
-    public String add(){
-        return "/category/add";
+    public String add(Integer id, HttpServletRequest req){
+        req.setAttribute("bean", id != null ? categoryMapper.selectById(id) : null);
+        return "/category/add"; // 将bean转发到add中，bean可能为空
     }
 
     @PostMapping("/add") // 表单提交
     public String add(CategoryBean bean){
-        categoryMapper.insert(bean);
+        if(bean.getId() != null){ // id不空，是修改操作
+            categoryMapper.updateById(bean);
+        } else {  // id为空，是添加操作
+            categoryMapper.insert(bean);
+        }
         return "redirect:/category/list"; // 插入后重新查询列表数据
     }
     // 删除操作
