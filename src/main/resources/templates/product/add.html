@@ -22,14 +22,18 @@
             var loading = null;  // 定义一个变量
             $('#upload-image').ajaxUploadPrompt({  // 找到id="upload-image"这个标签，绑定“打开选择文件”事件
                 url: '/product/logo',   // 图片上传的地址！！！！
+                // 上传之前
                 beforeSend: function () {
-                    loading = layer.load(1);
+                    loading = layer.load(1);  // 显示“正在加载“
                 },
+                // 上传成功
                 success: function (data) {
                     if (loading) {
                         layer.close(loading);
                     }
+                    alert(data);
                 },
+                // 上传失败
                 error: function () {
                     if (loading) {
                         layer.close(loading);
