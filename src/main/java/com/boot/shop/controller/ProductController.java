@@ -1,5 +1,6 @@
 package com.boot.shop.controller;
 
+import com.boot.shop.bean.ProductBean;
 import com.boot.shop.mapper.ProductMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,12 +27,31 @@ public class ProductController extends BaseController{
         return "/product/list";
     }
 
+    // 添加商品
+    @GetMapping("/add")
+    public String add(Integer id, int cid, HttpServletRequest req){
+        req.setAttribute("cid", cid);
+        req.setAttribute("bean", id != null ? (productMapper.selectById(id)) : null);
+        return "/product/add";
+    }
+
+    @PostMapping("/add")
+    public String add(ProductBean bean){
+        if(bean.getId() != null){
+            productMapper.updateById(bean);
+        } else {
+            productMapper.insert(bean);
+        }
+        return "redirect:/product/list?cid=" + bean.getCid();
+    }
+
     // 如果有外键的话，删除要同时给出id和cid
     @GetMapping("/del")
     public String del(int id, int cid){
         productMapper.deleteById(id);
         return "redirect:/product/list?cid=" + cid;
     }
+
 
     // @PostMapping("/list")
 
