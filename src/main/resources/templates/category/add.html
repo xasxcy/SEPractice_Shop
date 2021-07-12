@@ -16,7 +16,13 @@
 <div style="padding:0px; margin:0px;">
     <ul class="breadcrumb" style="  margin:0px; " >
         <li><a href="#">类别管理</a></li>
-        <li>添加类别</li>
+        <#if (bean.id)??>
+        <!-- ??判断是否存在-->
+             <li>修改类别</li>
+        <#else>
+            <li>添加类别</li>
+        </#if>
+
     </ul>
 </div>
 

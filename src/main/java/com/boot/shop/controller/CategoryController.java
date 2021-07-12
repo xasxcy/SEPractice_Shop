@@ -2,6 +2,7 @@ package com.boot.shop.controller;
 
 import com.boot.shop.bean.CategoryBean;
 import com.boot.shop.mapper.CategoryMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,17 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
 @RequestMapping("/category")
-public class CategoryController {
+public class CategoryController extends BaseController{
     @Resource
     private CategoryMapper categoryMapper;
 
     // 查询操作
     @RequestMapping("/list")
-    public String list(HttpServletRequest req){
+    public String list(HttpServletRequest req) {
         req.setAttribute("retList", categoryMapper.selectList(null));
         return "/category/list";
     }
@@ -32,23 +34,37 @@ public class CategoryController {
 
     // 添加和修改放在一起
     @GetMapping("/add") // 打开页面
-    public String add(Integer id, HttpServletRequest req){
+    public String add(Integer id, HttpServletRequest req) {
         req.setAttribute("bean", id != null ? categoryMapper.selectById(id) : null);
         return "/category/add"; // 将bean转发到add中，bean可能为空
     }
 
     @PostMapping("/add") // 表单提交
-    public String add(CategoryBean bean){
-        if(bean.getId() != null){ // id不空，是修改操作
-            categoryMapper.updateById(bean);
-        } else {  // id为空，是添加操作
-            categoryMapper.insert(bean);
+    public String add(CategoryBean bean, HttpServletResponse resp) {
+//        if(bean.getCategory() == null ||
+//                bean.getCategory().trim().equals(""))
+        if(StringUtils.isBlank(bean.getCategory())){ // isBlank()是封装好的方法，代替的是上面的逻辑
+            return jsAlert("请输入类别名称！",
+                    ("/category/add" + (bean.getId() != null ? "?id="+bean.getId() : "")),  // 解决了判空后重定向，再输入变为新增的问题
+                    resp);
+        }
+        try {  // 解决了
+            if (bean.getId() != null) { // id不空，是修改操作
+                categoryMapper.updateById(bean);
+            } else {  // id为空，是添加操作
+                categoryMapper.insert(bean);
+            }
+        } catch (Exception e){
+            return jsAlert(bean.getCategory() + "已经存在！",
+                    ("/category/add" + (bean.getId() != null ? "?id="+bean.getId() : "")),
+                    resp); // resp是把数据响应给页面
         }
         return "redirect:/category/list"; // 插入后重新查询列表数据
     }
+
     // 删除操作
     @RequestMapping("/del")
-    public String delete(Integer id){
+    public String delete(Integer id) {
         categoryMapper.deleteById(id);
         return "redirect:/category/list"; // 删除后重新查询列表数据
     }
