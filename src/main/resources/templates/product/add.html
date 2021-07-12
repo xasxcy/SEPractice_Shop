@@ -10,6 +10,35 @@
     <script src="../../../js/jquery.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="../../../js/bootstrap.min.js"></script>
+
+    <script src="../../../js/jquery.ajaxupload.js"></script>
+    <link rel="stylesheet" href="../../../layer/theme/default/layer.css"/>
+    <script src="../../../layer/layer.js"></script>
+
+
+    <script type="text/javascript">
+        $(function() {  // jquery主函数
+            $.ajaxUploadSettings.name = "file";  // 上传的是文件
+            var loading = null;  // 定义一个变量
+            $('#upload-image').ajaxUploadPrompt({  // 找到id="upload-image"这个标签，绑定“打开选择文件”事件
+                url: '/product/logo',   // 图片上传的地址！！！！
+                beforeSend: function () {
+                    loading = layer.load(1);
+                },
+                success: function (data) {
+                    if (loading) {
+                        layer.close(loading);
+                    }
+                },
+                error: function () {
+                    if (loading) {
+                        layer.close(loading);
+                    }
+                    alert('上传失败');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -74,11 +103,11 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">logo</label>
                 <div class="col-sm-9">
-                    <input type="text" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
+                    <input id="upload" type="upload" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
                     <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
-                    <input type="button" class="btn btn-success" value="上传图片"/>
+                    <input id="upload-image" type="button" class="btn btn-success" value="上传图片"/>
                     <br/>
-                    <img src="${(bean.logo)!}"/>
+                    <img id="image" src="${(bean.logo)!}"/>
                 </div>
             </div>
         </div>

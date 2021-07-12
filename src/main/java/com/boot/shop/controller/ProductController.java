@@ -6,9 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/product")
@@ -52,7 +54,11 @@ public class ProductController extends BaseController{
         return "redirect:/product/list?cid=" + cid;
     }
 
-
-    // @PostMapping("/list")
+    // 上传logo
+    @RequestMapping("/logo")
+    public void logo(MultipartFile file){
+        String fileName = file.getOriginalFilename();
+        System.out.println(fileName);
+    }
 
 }
