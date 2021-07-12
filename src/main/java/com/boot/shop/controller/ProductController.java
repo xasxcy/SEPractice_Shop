@@ -29,7 +29,7 @@ public class ProductController extends BaseController{
 
     // 添加商品
     @GetMapping("/add")
-    public String add(Integer id, int cid, HttpServletRequest req){
+    public String add(Integer id, Integer cid, HttpServletRequest req){
         req.setAttribute("cid", cid);
         req.setAttribute("bean", id != null ? (productMapper.selectById(id)) : null);
         return "/product/add";

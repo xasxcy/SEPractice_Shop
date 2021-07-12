@@ -22,7 +22,7 @@
 <form class="form-inline">
     <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
 
-        <a  class="btn btn-success"  href="/product/add">添加商品</a>
+        <a  class="btn btn-success"  href="/product/add?cid=${cid}">添加商品</a>
     </div>
     <div class="row" style="padding:15px; padding-top:0px; ">
         <table class="table  table-condensed table-striped">
@@ -47,7 +47,7 @@
                 <td>${(bean.hot)!}</td>
                 <td>${(bean.cid)!}</td>
                 <th>
-                    <a href="/product/add?id=${bean.id}">修改</a>
+                    <a href="/product/add?id=${bean.id}&cid=${bean.cid}">修改</a>
                     <a href="/product/del?id=${bean.id}&cid=${bean.cid}">删除</a>
                 </th>
             </tr>

@@ -29,7 +29,8 @@
 </div>
 
 <form action="/product/add" method="post" class="form-horizontal">
-    <input type="hidden" name="id", value="${(bean.id)!}"/>
+    <input type="hidden" name="id"  value="${(bean.id)!}"/>
+    <input type="hidden" name="cid" value="${cid}"/>
     <!-- 这个控件被隐藏了-->
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
     <div class="row">
@@ -75,6 +76,9 @@
                 <div class="col-sm-9">
                     <input type="text" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
                     <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                    <input type="button" class="btn btn-success" value="上传图片"/>
+                    <br/>
+                    <img src="${(bean.logo)!}"/>
                 </div>
             </div>
         </div>
