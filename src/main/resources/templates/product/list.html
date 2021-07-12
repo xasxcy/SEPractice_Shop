@@ -43,8 +43,13 @@
                 <td>${(bean.product)!}</td>
                 <td>${(bean.price)!}元</td>
                 <td>${(bean.num)!}个</td>
-                <td>${(bean.logo)!}</td>
-                <td>${(bean.hot)!}</td>
+                <td>
+                    <a href="${(bean.logo)!}" target="_blank">${(bean.logo)!}</a>
+                </td>
+                <td>
+                    <#if bean.hot == 1>热卖</#if>
+                    <#if bean.hot == 0>非热卖</#if>
+                </td>
                 <td>${(bean.cid)!}</td>
                 <th>
                     <a href="/product/add?id=${bean.id}&cid=${bean.cid}">修改</a>

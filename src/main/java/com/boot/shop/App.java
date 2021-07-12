@@ -21,7 +21,7 @@ public class App implements WebMvcConfigurer {
     @Override
     // 上传图片的地址映射
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/shop/**").addResourceLocations("file:F:/create/shop/"); //修改本地文件路径
+        registry.addResourceHandler("/shop/**").addResourceLocations("file:/Users/xasxcy/OneDrive/create/shop/"); //修改图片映射
     }
 
 }

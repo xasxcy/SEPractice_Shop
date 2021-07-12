@@ -29,9 +29,12 @@
                 // 上传成功
                 success: function (data) {
                     if (loading) {
-                        layer.close(loading);
+                        layer.close(loading); // 关闭“正在加载”
                     }
-                    alert(data);
+                    // alert(data); // 调试可用
+                    $('#image').attr('src', data); // 把‘image’标签的src属性设为data
+                                                    // 注意带上‘#’号
+                    $('#upload').val(data) // 非常关键！设置输入框值（val）。
                 },
                 // 上传失败
                 error: function () {
@@ -107,11 +110,12 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">logo</label>
                 <div class="col-sm-9">
-                    <input id="upload" type="upload" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
+                    <input id="upload" type="hidden" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
                     <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
                     <input id="upload-image" type="button" class="btn btn-success" value="上传图片"/>
                     <br/>
-                    <img id="image" src="${(bean.logo)!}"/>
+                    <img id="image" width="500px"  src="${(bean.logo)!}"/>
+<#--                    <video id="image" width="500px" src="${bean.logo}" controls="controls" autoplay="autoplay"/>-->
                 </div>
             </div>
         </div>
