@@ -28,8 +28,7 @@
         </div>
 
         <input type="button"   class="btn btn-danger"     value="查询"/>
-        <a  class="btn btn-success"  href="student_add.html">添加类别</a>
-
+        <a  class="btn btn-success"  href="/category/add">添加类别</a>
     </div>
     <div class="row" style="padding:15px; padding-top:0px; ">
         <table class="table  table-condensed table-striped">
@@ -43,8 +42,8 @@
                 <td>${bean.id}</td>
                 <td>${bean.category}</td>
                 <th>
-                    <a href="student_update.html">修改</a>
-                    <a href="">删除</a>
+                    <a href="/category/update">修改</a>
+                    <a href="/category/del?id=${bean.id}">删除</a>
                 </th>
             </tr>
         </tr>
