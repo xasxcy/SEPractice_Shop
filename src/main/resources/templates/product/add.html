@@ -15,28 +15,81 @@
 <body>
 <div style="padding:0px; margin:0px;">
     <ul class="breadcrumb" style="  margin:0px; " >
-        <li><a href="#">类别管理</a></li>
+        <li><a href="#">商品管理</a></li>
+        <li>当前商品</li>
+
         <#if (bean.id)??>
         <!-- ??判断是否存在-->
-             <li>修改类别</li>
+             <li>修改商品</li>
         <#else>
-            <li>添加类别</li>
+            <li>添加商品</li>
         </#if>
 
     </ul>
 </div>
 
-<form action="/category/add" method="post" class="form-horizontal">
+<form action="/product/add" method="post" class="form-horizontal">
     <input type="hidden" name="id", value="${(bean.id)!}"/>
     <!-- 这个控件被隐藏了-->
     <h5 class="page-header alert-info" style="padding:10px; margin:0px; margin-bottom:5px;">基本信息</h5>
     <div class="row">
         <div class="col-sm-5">
             <div class="form-group">
-                <label class="col-sm-3 control-label">类别名称</label>
+                <label class="col-sm-3 control-label">商品名称</label>
                 <div class="col-sm-9">
-                    <input type="text" name="category" value="${(bean.category)!}" class="form-control input-sm"/>
+                    <input type="text" name="product" value="${(bean.product)!}" class="form-control input-sm"/>
                     <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">单价</label>
+                <div class="col-sm-9">
+                    <input type="number" name="price" value="${(bean.price)!}" class="form-control input-sm"/>
+                    <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">剩余数量</label>
+                <div class="col-sm-9">
+                    <input type="number" name="num" value="${(bean.num)!}" class="form-control input-sm"/>
+                    <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">logo</label>
+                <div class="col-sm-9">
+                    <input type="text" name="logo" value="${(bean.logo)!}" class="form-control input-sm"/>
+                    <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">热卖</label>
+                <div class="col-sm-9">
+                    <select name="hot" value="${(bean.hot)!}" class="form-control input-sm">
+                    <!--                 这个感叹号的作用是，当bean或category为null时，将值赋为空字符串；网页遇到null会报错-->
+                        <option value="1">热卖</option>
+                        <option value="0">非热卖</option>
+                    </select>
                 </div>
             </div>
         </div>

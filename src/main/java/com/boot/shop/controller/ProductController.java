@@ -20,8 +20,17 @@ public class ProductController extends BaseController{
 //        if(cid == null){  下面传过去的查询使得我们无法直接访问/product/list，而必须带上相应的cid参数
 //            System.out.println("cid为空");
 //        }
+//        req.setAttribute("retList", productMapper.selectList(null)); // 展示所有商品
         req.setAttribute("retList", productMapper.getProduct(cid));
+        req.setAttribute("cid", cid);
         return "/product/list";
+    }
+
+    // 如果有外键的话，删除要同时给出id和cid
+    @GetMapping("/del")
+    public String del(int id, int cid){
+        productMapper.deleteById(id);
+        return "redirect:/product/list?cid=" + cid;
     }
 
     // @PostMapping("/list")
