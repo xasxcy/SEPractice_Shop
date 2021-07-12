@@ -16,8 +16,11 @@ public class ProductController extends BaseController{
     private ProductMapper productMapper;
 
     @GetMapping("/list") // 打开页面
-    public String list(HttpServletRequest req){
-        req.setAttribute("retList", productMapper.selectList(null));
+    public String list(Integer cid, HttpServletRequest req){
+//        if(cid == null){  下面传过去的查询使得我们无法直接访问/product/list，而必须带上相应的cid参数
+//            System.out.println("cid为空");
+//        }
+        req.setAttribute("retList", productMapper.getProduct(cid));
         return "/product/list";
     }
 
