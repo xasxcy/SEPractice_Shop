@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.boot.shop.util.NotNull;
 import org.beetl.sql.core.annotatoin.Table;
 
 @TableName("tbl_product")
@@ -12,9 +13,13 @@ public class ProductBean {
     private String category; // 只有关联查询时起作用，平常的增删改不起作用
     @TableId(value="id",type=IdType.AUTO)
     private Integer id;
+    @NotNull   // 不允许为空
     private String product;
+    @NotNull
     private Integer price;
+    @NotNull
     private Integer num;
+    @NotNull
     private String logo;
     private Integer hot;
     private Integer cid;
