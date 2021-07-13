@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7bed2de-cf61-4b5b-8caa-d338ce6c9387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/shop/bean/WxResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/shop/controller/WxController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b7f21d29-1a78-4ce5-84fa-adfb0f63d243" />
+        <option name="url" value="https://github.com/xasxcy/SEPractice_Shop.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="JavaSE-1.8" />
+  </component>
+  <component name="ProjectId" id="1v9FrsSDc9w3vOLwsTcOxGyRqra" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/boot/shop/util" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/boot/shop/util" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/product" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/boot/shop/controller" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="SE_Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boot.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.boot.shop.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7bed2de-cf61-4b5b-8caa-d338ce6c9387" name="Default Changelist" comment="" />
+      <created>1625966601052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625966601052</updated>
+      <workItem from="1625966604461" duration="14260000" />
+      <workItem from="1625989614359" duration="753000" />
+      <workItem from="1625990591860" duration="4809000" />
+      <workItem from="1626048136688" duration="417000" />
+      <workItem from="1626048709010" duration="23143000" />
+      <workItem from="1626134605578" duration="5385000" />
+      <workItem from="1626145401483" duration="1321000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <created>1625974073297</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625974073297</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第一次提交">
+      <created>1625986186974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625986186974</updated>
+    </task>
+    <task id="LOCAL-00003" summary="更新了UserController">
+      <created>1625987522750</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625987522750</updated>
+    </task>
+    <task id="LOCAL-00004" summary="更新了UserController">
+      <created>1625990445037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625990445037</updated>
+    </task>
+    <task id="LOCAL-00005" summary="更新了UserController">
+      <created>1625994052079</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625994052079</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修改了退出按钮">
+      <created>1625994780227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1625994780228</updated>
+    </task>
+    <task id="LOCAL-00007" summary="修改了退出按钮">
+      <created>1625995492470</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625995492470</updated>
+    </task>
+    <task id="LOCAL-00008" summary="完成了category的查询操作">
+      <created>1626051757463</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1626051757463</updated>
+    </task>
+    <task id="LOCAL-00009" summary="完成了category的展示操作">
+      <created>1626052663560</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1626052663560</updated>
+    </task>
+    <task id="LOCAL-00010" summary="完成了主页category的展示操作">
+      <created>1626054458518</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1626054458518</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完成了主页category的展示操作">
+      <created>1626057502700</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1626057502700</updated>
+    </task>
+    <task id="LOCAL-00012" summary="完成了修改操作">
+      <created>1626059260822</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1626059260822</updated>
+    </task>
+    <task id="LOCAL-00013" summary="完善了增改的逻辑">
+      <created>1626062290877</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1626062290877</updated>
+    </task>
+    <task id="LOCAL-00014" summary="添加了product的add和list静态页面">
+      <created>1626071313758</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626071313758</updated>
+    </task>
+    <task id="LOCAL-00015" summary="完善了/product/list的查询和展示">
+      <created>1626072791906</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1626072791906</updated>
+    </task>
+    <task id="LOCAL-00016" summary="完善了/product/add">
+      <created>1626075406107</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1626075406107</updated>
+    </task>
+    <task id="LOCAL-00017" summary="完善了ProductController的add逻辑">
+      <created>1626075857493</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1626075857493</updated>
+    </task>
+    <task id="LOCAL-00018" summary="完善了ProductController的add逻辑">
+      <created>1626078477590</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1626078477590</updated>
+    </task>
+    <task id="LOCAL-00019" summary="完善了/product/add页面的图片上传&#10;添加了ProductController的logo方法">
+      <created>1626079722969</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1626079722969</updated>
+    </task>
+    <task id="LOCAL-00020" summary="完善了/product/add页面的图片上传&#10;完善了ProductController的logo方法">
+      <created>1626081757173</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1626081757173</updated>
+    </task>
+    <task id="LOCAL-00021" summary="完善了/product/add页面的图片上传">
+      <created>1626083629693</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1626083629693</updated>
+    </task>
+    <task id="LOCAL-00022" summary="完成了ProductMapper的关联查询&#10;完善了add.html网页的显示逻辑">
+      <created>1626135938482</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1626135938482</updated>
+    </task>
+    <task id="LOCAL-00023" summary="1. 增加了自定义注解@NotNull和自定义配套类NotNullUtil&#10;2. 在ProductController的/add中使用了这种判空法">
+      <created>1626136734552</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1626136734552</updated>
+    </task>
+    <task id="LOCAL-00024" summary="完善了ProductController的/add的逻辑">
+      <created>1626138343766</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1626138343766</updated>
+    </task>
+    <task id="LOCAL-00025" summary="完善了ProductController的逻辑和其list页面">
+      <created>1626139703390</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1626139703390</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="第一次提交" />
+    <MESSAGE value="更新了UserController" />
+    <MESSAGE value="修改了退出按钮" />
+    <MESSAGE value="完成了category的查询操作" />
+    <MESSAGE value="完成了category的展示操作" />
+    <MESSAGE value="完成了主页category的展示操作" />
+    <MESSAGE value="完成了修改操作" />
+    <MESSAGE value="完善了增改的逻辑" />
+    <MESSAGE value="添加了product的add和list静态页面" />
+    <MESSAGE value="完善了/product/list的查询和展示" />
+    <MESSAGE value="完善了/product/add" />
+    <MESSAGE value="完善了ProductController的add逻辑" />
+    <MESSAGE value="完善了/product/add页面的图片上传&#10;添加了ProductController的logo方法" />
+    <MESSAGE value="完善了/product/add页面的图片上传&#10;完善了ProductController的logo方法" />
+    <MESSAGE value="完善了/product/add页面的图片上传" />
+    <MESSAGE value="完成了ProductMapper的关联查询&#10;完善了add.html网页的显示逻辑" />
+    <MESSAGE value="1. 增加了自定义注解@NotNull和自定义配套类NotNullUtil&#10;2. 在ProductController的/add中使用了这种判空法" />
+    <MESSAGE value="完善了ProductController的/add的逻辑" />
+    <MESSAGE value="完善了ProductController的逻辑和其list页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了ProductController的逻辑和其list页面" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
