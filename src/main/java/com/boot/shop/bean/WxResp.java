@@ -15,5 +15,6 @@ public class WxResp {
     }
 
     public List<CategoryBean> category; // 类别数组
-
+    public List<ProductBean> product; // 商品数组
+    public List<ProductBean> hot; // 热卖数组
 }

@@ -15,5 +15,8 @@ public interface ProductMapper extends BaseMapper<ProductBean> {
             "where cid = #{cid}")
     List<ProductBean> getProduct(@Param("cid")int cid);
 
+    // 获取热卖产品
+    @Select("select * from tbl_product where hot=1")
+    List<ProductBean> getHot();
 
 }
