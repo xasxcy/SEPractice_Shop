@@ -42,6 +42,7 @@ public class ProductController extends BaseController {
 
     @PostMapping("/add")
     public String add(ProductBean bean, HttpServletResponse resp) {
+        // 逻辑：关键属性不能为空
         if (NotNullUtil.isBlank(bean)) {
             // 如果有@NotNull注解的属性，只要发现值是空的，就返回true
             return jsAlert("请完善商品信息！",
@@ -49,6 +50,10 @@ public class ProductController extends BaseController {
                             (bean.getId() != null ? "&id=" + bean.getId() : "")),
                     resp);
         }
+        // 逻辑：处理整型数据：不允许为负值
+        bean.setPrice(Math.abs(bean.getPrice()));
+        bean.setNum(Math.abs(bean.getNum()));
+        // 逻辑：根据有无id判断是插入新数据还是修改
         if (bean.getId() != null) {
             productMapper.updateById(bean);
         } else {

@@ -19,12 +19,12 @@
         <li>查询类别</li>
     </ul>
 </div>
-<form class="form-inline">
+<form class="form-inline" method="get" action="/category">
     <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
 
         <div class="form-group">
             <label class="" for="activename">类别名称：</label>
-            <input type="email" class="form-control" id="activename" placeholder="请输入类别名称">
+            <input type="text" class="form-control" name="category" placeholder="请输入类别名称">
         </div>
 
         <input type="button"   class="btn btn-danger"     value="查询"/>
