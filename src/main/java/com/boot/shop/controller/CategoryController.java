@@ -21,8 +21,12 @@ public class CategoryController extends BaseController{
 
     // 查询操作
     @RequestMapping("/list")
-    public String list(HttpServletRequest req) {
-        req.setAttribute("retList", categoryMapper.selectList(null));
+    public String list(String category, HttpServletRequest req) {
+        req.setAttribute("category", category);
+        // 如果没有搜索条件，就查询所有内容；否则，模糊查询
+        req.setAttribute("retList", StringUtils.isBlank(category) ?
+                categoryMapper.selectList(null) :
+                categoryMapper.getLike("%" + category + "%"));
         return "/category/list";
     }
 

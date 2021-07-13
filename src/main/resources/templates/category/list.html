@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>首页</title>
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
@@ -14,21 +14,21 @@
 
 <body>
 <div style="padding:0px; margin:0px;">
-    <ul class="breadcrumb" style="  margin:0px; " >
+    <ul class="breadcrumb" style="  margin:0px; ">
         <li><a href="#">类别管理</a></li>
         <li>查询类别</li>
     </ul>
 </div>
-<form class="form-inline" method="get" action="/category">
-    <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
+<form class="form-inline" method="get" action="/category/list">
+    <div class="row alert alert-info" style="margin:0px; padding:3px;">
 
         <div class="form-group">
             <label class="" for="activename">类别名称：</label>
-            <input type="text" class="form-control" name="category" placeholder="请输入类别名称">
+            <input type="text" value="${category!}" class="form-control" name="category" placeholder="请输入类别名称">
         </div>
 
-        <input type="button"   class="btn btn-danger"     value="查询"/>
-        <a  class="btn btn-success"  href="/category/add">添加类别</a>
+        <input type="submit" class="btn btn-danger" value="查询"/>
+        <a class="btn btn-success" href="/category/add">添加类别</a>
     </div>
     <div class="row" style="padding:15px; padding-top:0px; ">
         <table class="table  table-condensed table-striped">
@@ -38,17 +38,19 @@
             </tr>
             <!-- 在这里用freeMarker的list包裹起来，会自动增加新行 -->
             <#list retList as bean>
-            <tr>
-                <td>${bean.id}</td>
-                <td>${bean.category}</td>
-                <th>
-                    <a href="/product/list?cid=${bean.id}">商品</a>
-                    <a href="/category/add?id=${bean.id}">修改</a>
-                    <a href="/category/del?id=${bean.id}">删除</a>
-                </th>
-            </tr>
-        </tr>
-        </#list>
+                <tr>
+                    <td>${bean.id}</td>
+                    <td>${bean.category}</td>
+                    <th>
+                        <a href="/product/list?cid=${bean.id}">商品</a>
+                        <#if !category??||category==''> <!--如果不存在或等于空--> <!-- 说明查询全部数据-->
+                            <a href="/category/add?id=${bean.id}">修改</a>
+                            <a href="/category/del?id=${bean.id}">删除</a>
+                        </#if>
+                    </th>
+                </tr>
+                </tr>
+            </#list>
         </table>
     </div>
 </form>
