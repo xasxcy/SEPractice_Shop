@@ -23,6 +23,7 @@
     <div class="row alert alert-info"  style="margin:0px; padding:3px;" >
 
         <a  class="btn btn-success"  href="/product/add?cid=${cid}">添加商品</a>
+        <a class="btn btn-warning" href="javascript:window.history.back()">返回上一级</a>
     </div>
     <div class="row" style="padding:15px; padding-top:0px; ">
         <table class="table  table-condensed table-striped">
@@ -50,7 +51,7 @@
                     <#if bean.hot == 1>热卖</#if>
                     <#if bean.hot == 0>非热卖</#if>
                 </td>
-                <td>${(bean.cid)!}</td>
+                <td>${(bean.category)!}</td>
                 <th>
                     <a href="/product/add?id=${bean.id}&cid=${bean.cid}">修改</a>
                     <a href="/product/del?id=${bean.id}&cid=${bean.cid}">删除</a>
