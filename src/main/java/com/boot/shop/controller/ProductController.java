@@ -73,13 +73,13 @@ public class ProductController extends BaseController {
     @RequestMapping("/logo")
     public void logo(MultipartFile file, HttpServletResponse resp) {
         String fileName = file.getOriginalFilename();
-        System.out.println(fileName);
         try {
             file.transferTo(new File("/Users/xasxcy/OneDrive/create/shop/file/" + fileName)); // 注意最后一个斜杠要写，不写的话会放到上一级目录里
         } catch (Exception e) {
             System.out.println("检查有没有创建好这个路径");
         }
-        // 输出图片路径给页面，没有前缀，为什么？
+        // 【问】输出图片路径给页面，没有前缀，为什么？
+        // 【答】因为资源路径的前缀放在App.java里
         outRespJson("/shop/file/" + fileName, resp);
     }
 
