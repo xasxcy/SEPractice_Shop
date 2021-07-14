@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7bed2de-cf61-4b5b-8caa-d338ce6c9387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/shop/bean/WxResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/shop/controller/WxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/shop/controller/WxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/shop/controller/WxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/shop/bean/ProductBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/shop/bean/ProductBean.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -75,7 +75,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -134,7 +134,9 @@
       <workItem from="1626048136688" duration="417000" />
       <workItem from="1626048709010" duration="23143000" />
       <workItem from="1626134605578" duration="5385000" />
-      <workItem from="1626145401483" duration="1321000" />
+      <workItem from="1626145401483" duration="5305000" />
+      <workItem from="1626221043221" duration="3256000" />
+      <workItem from="1626243378412" duration="3614000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <created>1625974073297</created>
@@ -311,7 +313,35 @@
       <option name="project" value="LOCAL" />
       <updated>1626139703390</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="添加了对小程序的数据申请的返回的代码">
+      <created>1626166160783</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1626166160783</updated>
+    </task>
+    <task id="LOCAL-00027" summary="完善了提交订单的后台处理">
+      <created>1626234637608</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1626234637609</updated>
+    </task>
+    <task id="LOCAL-00028" summary="完善了提交订单的后台处理">
+      <created>1626243836187</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1626243836187</updated>
+    </task>
+    <task id="LOCAL-00029" summary="完成了提交订单后，对购物关系表tbl_shopping的处理">
+      <created>1626247874348</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1626247874349</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +381,10 @@
     <MESSAGE value="1. 增加了自定义注解@NotNull和自定义配套类NotNullUtil&#10;2. 在ProductController的/add中使用了这种判空法" />
     <MESSAGE value="完善了ProductController的/add的逻辑" />
     <MESSAGE value="完善了ProductController的逻辑和其list页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了ProductController的逻辑和其list页面" />
+    <MESSAGE value="添加了对小程序的数据申请的返回的代码" />
+    <MESSAGE value="完善了提交订单的后台处理" />
+    <MESSAGE value="完成了提交订单后，对购物关系表tbl_shopping的处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了提交订单后，对购物关系表tbl_shopping的处理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
