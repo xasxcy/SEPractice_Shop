@@ -3,6 +3,7 @@ package com.boot.shop.bean;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.boot.shop.util.NotNull;
 
 import java.util.Date;
 
@@ -10,11 +11,14 @@ import java.util.Date;
 public class OrderBean {
     @TableId(value="id", type= IdType.AUTO)
     private Integer id;
+    @NotNull(fieldName = "姓名")
     private String name;
+    @NotNull(fieldName = "手机")
     private String mobile;
+    @NotNull(fieldName = "地址")
     private String address;
+    @NotNull(fieldName = "总价")
     private Integer total;
-
     private Date ctime;
 
     public Integer getId() {
