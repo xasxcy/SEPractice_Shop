@@ -41,7 +41,7 @@ public class WxController extends BaseController {
         WxResp r = new WxResp(); // r只是一个普通对象
         r.category = categoryMapper.selectList(null);
         if (!r.category.isEmpty()) { // 获取第一个类别的所有商品
-            r.product = cid!=null ? productMapper.getProduct(cid) :
+            r.product = cid != null ? productMapper.getProduct(cid) :
                     productMapper.getProduct(r.category.get(0).getId());
         }
         // 获取热卖商品列表
@@ -50,18 +50,21 @@ public class WxController extends BaseController {
     }
 
     @PostMapping("/order") // 小程序提交订单```
-    public void order(OrderBean bean, HttpServletResponse resp){
+    public void order(OrderBean bean, HttpServletResponse resp) {
         // json字符串转成对象或数组：使用谷歌的gson jar包。固定写法。
         List<ProductBean> productBeanList = new Gson().fromJson(bean.getJson(),
-                new TypeToken<List<ProductBean>>(){}.getType()); // TypeToken是抽象类，直接实例化然后调用方法
+                new TypeToken<List<ProductBean>>() {
+                }.getType()); // TypeToken是抽象类，直接实例化然后调用方法
         WxResp r = new WxResp();
         String alert = NotNullUtil.isBlankAlert(bean);
-        if(alert != null){  // 说明有错误
+        if (alert != null) {  // 说明有错误
             r.fail(alert); // 失败了
+        } else if (productBeanList.isEmpty()) { // 是空数组
+            r.fail("购物车是空的");
         } else {
             bean.setCtime(new Date());  // ctime字段是在java终生陈德高
             orderMapper.insert(bean);  // 新订单添加到订单表中
-            for(ProductBean p : productBeanList){  // 把此订单中的产品加入购物（关系）表中
+            for (ProductBean p : productBeanList) {  // 把此订单中的产品加入购物（关系）表中
                 ShoppingBean shoppingBean = new ShoppingBean(bean.getId(), p.getId(), p.getCount());
                 shoppingMapper.insert(shoppingBean);
             }
