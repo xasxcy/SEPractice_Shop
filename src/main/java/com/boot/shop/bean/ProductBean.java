@@ -9,9 +9,20 @@ import org.beetl.sql.core.annotatoin.Table;
 
 @TableName("tbl_product")
 public class ProductBean {
-    @TableField(exist=false) // 表示数据表里没有这个字段
+    @TableField(exist = false) // 表示数据表里没有这个字段
     private String category; // 只有关联查询时起作用，平常的增删改不起作用
-    @TableId(value="id",type=IdType.AUTO)
+    @TableField(exist = false) // 这个属性是从json传过来的，用于表示购物车的数量
+    private Integer count;
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
     @NotNull   // 不允许为空
     private String product;

@@ -1,6 +1,7 @@
 package com.boot.shop.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.boot.shop.util.NotNull;
@@ -20,6 +21,16 @@ public class OrderBean {
     @NotNull(fieldName = "总价")
     private Integer total;
     private Date ctime;
+    @TableField(exist = false)  // 数据库里没有
+    private String json;
+
+    public String getJson() {
+        return json;
+    }
+
+    public void setJson(String json) {
+        this.json = json;
+    }
 
     public Integer getId() {
         return id;
